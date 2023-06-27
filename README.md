@@ -1,6 +1,6 @@
 # Pac-Man
 
-<img src="PacMan.jpg" alt="Pac-man Exercise">
+<img src="PacMan.png" alt="Pac-man Exercise">
 
 **Descripción:** Este ejercicio consistía en crear un pacman a pedido a partir de una variedad de diferentes pacmen y luego moverlos por la página. Este fue un ejercicio que requirió la manipulación de DOM.
 
