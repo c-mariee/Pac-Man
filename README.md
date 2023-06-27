@@ -1,44 +1,7 @@
 # Pac-Man
 
-var pos = 0;
+**Descripción:** Este ejercicio consistía en crear un pacman a pedido a partir de una variedad de diferentes pacmen y luego moverlos por la página. Este fue un ejercicio que requirió la manipulación de DOM.
 
-let pageWidth = window.innerWidth;
+**Futuras mejoras:** Las mejoras futuras que estoy considerando para este proyecto son limpiar las imágenes actuales de los pacmen, potencialmente incluir opciones adicionales de pacmen en el área (o los fantasmas que son parte del juego), y agregar algo de estilo al fondo.
 
-const pacArray = [
-  ['./images/PacMan1.png', './images/PacMan2.png'],
-  ['./images/PacMan3.png', './images/PacMan4.png'],
-];
-
-var direction = 0;
-
-var focus = 0;
-
-function Run() {
-  let img = document.getElementById('PacMan');
-  let imgWidth = img.width;
-  focus = (focus + 1) % 2;
-  direction = checkPageBounds(direction, imgWidth, pos, null);
-  img.src = pacArray[direction][focus];
-  if (direction) {
-    pos -= 20;
-    img.style.left = pos + 'px';
-  } else {
-    pos += 20;
-    img.style.left = pos + 'px';
-  }
-}
-
-setInterval(Run, 300);
-
-function checkPageBounds(direction, imgWidth, pos, pageWidth) {
-  // 
-  // TODO: Complete this to reverse direction upon hitting screen edge
-  // 
-  var finalPosition = imgWidth + pos
-  if (finalPosition >= pageWidth) {
-    direction = 1;
-  } else if (pos < 0) {
-    direction = 0
-  }
-  return direction;
-}
+**Ejecutando el código:** Para ejecutar este código, debe abrir el archivo html en su navegador y hacer clic en "Agregar Pacman". Puede agregar tantos Pacmen como desee haciendo clic en este botón.
